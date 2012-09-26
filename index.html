@@ -1,9 +1,28 @@
 <html>
 <head>
 <title>App1</title>
+<script>
+<!--
+function reSize()
+{
+	try{	
+	var oBody	=	ifrm.document.body;
+	var oFrame	=	document.all("ifrm");
+		
+	oFrame.style.height = oBody.scrollHeight + (oBody.offsetHeight - oBody.clientHeight);
+	oFrame.style.width = oBody.scrollWidth + (oBody.offsetWidth - oBody.clientWidth);
+	}
+	//An error is raised if the IFrame domain != its container's domain
+	catch(e)
+	{
+	window.status =	'Error: ' + e.number + '; ' + e.description;
+	}
+}
+//-->
+</script>
 </head>
 <body>
-	<h1>Hello!</h1>
+<iframe width="100%" height="100%" onresize="reSize()" id="ifrm" src="http://data1.slub.se/nvh/pers"></iframe>
 </body>
 </html>
 
